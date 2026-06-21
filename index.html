@@ -490,7 +490,7 @@
         <article class="com reveal d1">
           <div class="label">02 — Accountability</div>
           <h3>One lawyer responsible.</h3>
-          <p>No handovers, no file passed between departments.<br><br><b>One person answers for the whole transaction.</b></p>
+          <p>No handovers, no file passed between departments.<br><b>One person answers for the whole transaction.</b></p>
         </article>
         <article class="com reveal d2">
           <div class="label">03 — Honesty</div>
@@ -591,7 +591,7 @@
             </div>
             <div class="item">
               <div class="k">Education</div>
-              <div class="v small">Law Degree, University of Lisbon.<br>Postgraduate in Insolvency &amp; Company Restructuring.<br>Master in Law &amp; Management and Postgraduate in Real Estate Law, Universidade Católica.</div>
+              <div class="v small">Law Degree, University of Lisbon.<br>Postgraduate in Insolvency &amp; Company Restructuring.<br>Master in Law &amp; Management, Universidade Católica.<br>Postgraduate in Real Estate Law, Universidade Católica.</div>
             </div>
             <div class="item">
               <div class="k">Outside work</div>
@@ -704,6 +704,14 @@
       const btn = form.querySelector('button[type="submit"]');
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        const consent = form.querySelector('#consent');
+        if (consent && !consent.checked) {
+          note.innerHTML = '<strong>Please tick the box</strong> to agree to the Privacy Policy before sending.';
+          consent.focus();
+          return;
+        }
+
         btn.disabled = true;
         const original = btn.innerHTML;
         btn.innerHTML = 'Sending…';
