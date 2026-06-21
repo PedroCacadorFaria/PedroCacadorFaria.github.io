@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -87,13 +87,25 @@
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font-family: "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: "Spectral", Georgia, "Times New Roman", serif;
       font-size: 16px; line-height: 1.6; font-weight: 400;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
     ::selection { background: var(--accent); color: var(--paper); }
     a { color: inherit; text-decoration: none; }
+
+    /* Justified body paragraphs with clean hyphenation (no ugly gaps on phones) */
+    .sit-after p, .speed-body p, .out p, .fit-card p, .about-copy p, .reach-left .intro {
+      text-align: justify;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
+    @media (max-width: 720px) {
+      .sit-after p, .speed-body p, .out p, .fit-card p, .about-copy p, .reach-left .intro {
+        text-align: left;
+      }
+    }
 
     .page { max-width: 1240px; margin: 0 auto; padding: 0 56px; }
     @media (max-width: 720px) { .page { padding: 0 22px; } }
@@ -389,7 +401,7 @@
     <div class="nav-inner">
       <div class="brand-block">
         <span class="brand">Pedro Caçador Faria</span>
-        <span class="brand-sub">Real Estate &amp; Corporate Lawyer · Lisbon, Portugal</span>
+        <span class="brand-sub">Lawyer · Real Estate &amp; Corporate · Lisbon, Portugal</span>
       </div>
       <nav aria-label="Primary">
         <a href="#practice">Practice</a>
@@ -409,7 +421,7 @@
         Portuguese real estate without the exposure that <span class="accent">catches foreign buyers.</span>
       </h1>
       <p class="sub reveal d2">
-        A Lisbon lawyer for international investors and families buying, owning and monetizing real estate in Portugal. From your first question to clean title and steady ownership — <b>structured properly and closed without friction.</b>
+        A Lisbon lawyer for international investors and families buying, owning and monetizing real estate in Portugal.<br><br>From your first question to clean title and steady ownership — <b>structured properly and closed without friction.</b>
       </p>
       <div class="cta-row reveal d3">
         <a href="#reach" class="btn">Reach out <span class="a">→</span></a>
@@ -420,7 +432,7 @@
       <div class="practice reveal d4" id="practice">
         <div class="practice-col">
           <div class="practice-num">01</div>
-          <h3 class="practice-h">Real Estate <span class="ac">·</span> acquisition to ownership</h3>
+          <h3 class="practice-h">Real Estate <span class="ac">&amp;</span> Planning</h3>
           <p class="practice-p">Buying, structuring, financing, leasing and selling property — residential, hospitality, tourism and commercial. Diligence, the holding structure, the contract and the registry.</p>
           <div class="practice-tags">
             <span>Acquisition &amp; due diligence</span>
@@ -432,7 +444,7 @@
         </div>
         <div class="practice-col">
           <div class="practice-num">02</div>
-          <h3 class="practice-h">Corporate <span class="ac">·</span> the company behind the asset</h3>
+          <h3 class="practice-h">Corporate <span class="ac">&amp;</span> M&amp;A</h3>
           <p class="practice-p">Company incorporation, shareholder arrangements, M&amp;A and restructuring — built around the deal, so the entity that holds your property is set up correctly from day one.</p>
           <div class="practice-tags">
             <span>Company incorporation</span>
@@ -451,14 +463,14 @@
       <div class="quote-wrap">
         <span class="quote-mark reveal" aria-hidden="true">“</span>
         <blockquote class="quote reveal d1" id="sit-title">
-          The hardest part was never finding the building. It was everything I couldn't see — the title, the licence, the tax. <span class="accent">What I actually needed was someone local who already knew where the problems hide.</span>
+          The hardest part was never finding the building. It was everything I couldn't see — the title, the licence, the tax.<br><br><span class="accent">What I actually needed was someone local who already knew where the problems hide.</span>
         </blockquote>
         <div class="quote-attrib reveal d1">The recurring conclusion of <strong>foreign investors</strong> buying in Portugal.</div>
       </div>
 
       <div class="sit-after reveal">
         <div class="l">In short</div>
-        <p>You commit serious capital in a system you cannot read and a language you do not negotiate in. The risk is rarely the building — it is the title that looks clean and isn't, the licence that limits what the asset can become, the tax fixed by how you buy. <strong>Removing that exposure is the work.</strong></p>
+        <p>You commit serious capital in a system you cannot read and a language you do not negotiate in.<br><br>The risk is rarely the building — it is the title that looks clean and isn't, the licence that limits what the asset can become, the tax fixed by how you buy. <strong>Removing that exposure is the work.</strong></p>
       </div>
     </section>
 
@@ -466,19 +478,19 @@
     <section class="block alt" id="how" aria-labelledby="how-title">
       <div class="s-head">
         <div class="eyebrow reveal">02 — How I work</div>
-        <h2 id="how-title" class="s-title reveal d1">Three commitments. <span class="accent">The ones that matter when you cannot verify anything yourself.</span></h2>
+        <h2 id="how-title" class="s-title reveal d1">Three commitments.<br><span class="accent">The ones that matter when you cannot verify anything yourself.</span></h2>
       </div>
 
       <div class="com-grid">
         <article class="com reveal">
           <div class="label">01 — Loyalty</div>
           <h3>I act for you, and only you.</h3>
-          <p><b>One client in the room. You.</b></p>
+          <p>One client in the room. You.</p>
         </article>
         <article class="com reveal d1">
           <div class="label">02 — Accountability</div>
           <h3>One lawyer responsible.</h3>
-          <p>No handovers, no file passed between departments. <b>One person answers for the whole transaction.</b></p>
+          <p>No handovers, no file passed between departments.<br><br><b>One person answers for the whole transaction.</b></p>
         </article>
         <article class="com reveal d2">
           <div class="label">03 — Honesty</div>
@@ -559,7 +571,8 @@
           </div>
           <div style="text-align:center;">
             <div class="about-name" id="about-title">Pedro Caçador Faria</div>
-            <div class="about-role">Real Estate &amp; Corporate Lawyer</div>
+            <div class="about-role">Lawyer</div>
+            <div class="about-role" style="color:var(--muted); margin-top:2px;">Real Estate &amp; Corporate</div>
           </div>
         </div>
 
