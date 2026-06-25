@@ -193,7 +193,10 @@
 
     /* COMMITMENTS */
     .com-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .com-grid.four { grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 980px) { .com-grid.four { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 900px) { .com-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 620px) { .com-grid.four { grid-template-columns: 1fr; } }
     .com { padding: 32px 30px 36px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
     .com .label { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
     .com h3 { font-weight: 600; font-size: 21px; line-height: 1.25; letter-spacing: -0.015em; margin: 0 0 12px; color: var(--ink); max-width: 22ch; }
@@ -228,6 +231,24 @@
     .fit-card p { font-size: 15.5px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 12px; max-width: 52ch; }
     .fit-card p strong { color: var(--ink); font-weight: 600; }
     .fit-card.minor .tag, .fit-card.minor .head, .fit-card.minor p { color: var(--muted); }
+
+    /* FIT — single block variant */
+    .fit-single { border-top: 1px solid var(--line); padding-top: 28px; max-width: 760px; }
+    .fit-single .tag { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+    .fit-single .head { font-weight: 600; font-size: 24px; line-height: 1.3; letter-spacing: -0.015em; color: var(--ink); margin: 0 0 18px; max-width: 28ch; }
+    .fit-single p { font-size: 16.5px; line-height: 1.66; color: var(--ink-soft); margin: 0 0 16px; max-width: 60ch; text-align: justify; hyphens: auto; }
+    .fit-single .fit-invite {
+      margin-top: 24px; padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: 14.5px; line-height: 1.6; letter-spacing: 0;
+      font-weight: 400; color: var(--muted);
+      text-align: left; max-width: 56ch;
+    }
+    @media (max-width: 720px) { .fit-single .fit-invite { font-size: 14px; } }
+    @media (max-width: 720px) {
+      .fit-single .head { font-size: 20px; }
+      .fit-single p { font-size: 15.5px; text-align: left; }
+    }
 
     /* ABOUT — structured */
     .about-grid { display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start; }
@@ -457,113 +478,9 @@
       </div>
     </section>
 
-    <!-- SITUATION — client voice -->
-    <section class="block" id="situation" aria-labelledby="sit-title">
-      <div class="eyebrow reveal">01 — The situation</div>
-      <div class="quote-wrap">
-        <span class="quote-mark reveal" aria-hidden="true">“</span>
-        <blockquote class="quote reveal d1" id="sit-title">
-          The hardest part was never finding the building. It was everything I couldn't see — the title, the licence, the tax.<br><br><span class="accent">What I actually needed was someone local who already knew where the problems hide.</span>
-        </blockquote>
-        <div class="quote-attrib reveal d1">The recurring conclusion of <strong>foreign investors</strong> buying in Portugal.</div>
-      </div>
-
-      <div class="sit-after reveal">
-        <div class="l">In short</div>
-        <p>You commit serious capital in a system you cannot read and a language you do not negotiate in.<br><br>The risk is rarely the building — it is the title that looks clean and isn't, the licence that limits what the asset can become, the tax fixed by how you buy. <strong>Removing that exposure is the work.</strong></p>
-      </div>
-    </section>
-
-    <!-- HOW I WORK — commitments -->
-    <section class="block alt" id="how" aria-labelledby="how-title">
-      <div class="s-head">
-        <div class="eyebrow reveal">02 — How I work</div>
-        <h2 id="how-title" class="s-title reveal d1">Three commitments.<br><span class="accent">The ones that matter when you cannot verify anything yourself.</span></h2>
-      </div>
-
-      <div class="com-grid">
-        <article class="com reveal">
-          <div class="label">01 — Loyalty</div>
-          <h3>I act for you, and only you.</h3>
-          <p>One client in the room. You.</p>
-        </article>
-        <article class="com reveal d1">
-          <div class="label">02 — Accountability</div>
-          <h3>One lawyer responsible.</h3>
-          <p>No handovers, no file passed between departments.<br><b>One person answers for the whole transaction.</b></p>
-        </article>
-        <article class="com reveal d2">
-          <div class="label">03 — Honesty</div>
-          <h3>You always know where you stand.</h3>
-          <p>No silence, no surprises at signing. <b>Each decision explained before it is taken.</b></p>
-        </article>
-      </div>
-    </section>
-
-    <!-- SPEED — business statement -->
-    <section class="block" id="speed" aria-labelledby="speed-title">
-      <div class="eyebrow reveal">03 — Time</div>
-      <div class="speed-grid">
-        <h2 id="speed-title" class="speed-lead reveal">In Portugal, the deal is rarely lost on price. <span class="accent">It is lost to delay.</span></h2>
-        <div class="speed-body reveal d1">
-          <p>Portuguese transactions move through notaries, registries and public offices that run on their own pace. A file left to that pace drifts — and an opportunity can move on while it waits.</p>
-          <p>My job is to keep the file moving. I prepare what each office needs before it asks, push the steps that can run in parallel, and stay on the parts that stall.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHAT YOU GET -->
-    <section class="block alt" id="get" aria-labelledby="get-title">
-      <div class="s-head">
-        <div class="eyebrow reveal">04 — What you get</div>
-        <h2 id="get-title" class="s-title reveal d1">Not a list of services. <span class="accent">A position that holds.</span></h2>
-      </div>
-
-      <div class="out-list">
-        <article class="out reveal">
-          <h3>Acquisition, <span class="accent">structured and closed.</span></h3>
-          <p>Diligence that finds what matters. A holding structure decided before you commit. The transaction taken cleanly through negotiation, notary and registry — <b>without you chasing anyone.</b></p>
-        </article>
-        <article class="out reveal d1">
-          <h3>Ownership that <span class="accent">holds up.</span></h3>
-          <p>Title, tax position and structure built to survive scrutiny — from the authorities, from a future buyer and from your own succession.</p>
-        </article>
-        <article class="out reveal d2">
-          <h3>Assets you can <span class="accent">monetize.</span></h3>
-          <p>Lease and tourism structures set up to generate yield — short-term rental licences, hotel and aparthotel frameworks, retail and hospitality leases. Compliance and upside, designed together.</p>
-        </article>
-        <article class="out reveal d3">
-          <h3>A position you <span class="accent">can leave.</span></h3>
-          <p>Every structure built with the eventual sale, refinancing or inheritance already in view.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- FIT -->
-    <section class="block" id="fit" aria-labelledby="fit-title">
-      <div class="s-head">
-        <div class="eyebrow reveal">05 — Who I work with</div>
-        <h2 id="fit-title" class="s-title reveal d1">International investors who want <span class="accent">one lawyer responsible — end to end.</span></h2>
-      </div>
-
-      <div class="fit-grid">
-        <div class="fit-card reveal">
-          <div class="tag">A good fit</div>
-          <h3 class="head">Investors, families, developers and builders committing seriously to Portuguese real estate.</h3>
-          <p>From Europe, the US, Brazil, Russia, the Gulf, India, Israel and beyond — wherever the capital comes from.</p>
-          <p>People who value judgement over volume, and who would rather hold a single trusted line into the market than a directory of contacts.</p>
-        </div>
-        <div class="fit-card minor reveal d1">
-          <div class="tag">Less so</div>
-          <h3 class="head">If you need the lowest fixed fee, or documents processed without anyone questioning the deal.</h3>
-          <p>And if I'm not the right person to help, I'll point you to someone who is.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- ABOUT -->
     <section class="block alt" id="about" aria-labelledby="about-title">
-      <div class="eyebrow reveal">06 — About</div>
+      <div class="eyebrow reveal">01 — About</div>
       <div class="about-grid">
         <div class="reveal">
           <div class="about-photo">
@@ -578,7 +495,7 @@
 
         <div class="about-copy reveal d1">
           <p>A lawyer in Lisbon with <strong>over five years advising on real estate and corporate transactions</strong> in Portugal — for international and domestic clients buying, structuring, financing and selling property. The work spans residential, hospitality, tourism and commercial assets, and the companies built to hold them.</p>
-          <p>One file, one point of contact. The same lawyer who takes your first message handles the transaction through to registration. Working languages: Portuguese and English.</p>
+          <p>One file, one point of contact. The same lawyer who takes your first message handles the transaction through to registration. Working languages: English and Portuguese.</p>
 
           <div class="about-meta">
             <div class="item">
@@ -599,6 +516,84 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- HOW I WORK — four commitments -->
+    <section class="block" id="how" aria-labelledby="how-title">
+      <div class="s-head">
+        <div class="eyebrow reveal">02 — How I work</div>
+        <h2 id="how-title" class="s-title reveal d1">Four commitments.<br><span class="accent">The ones that matter.</span></h2>
+      </div>
+
+      <p class="how-intro reveal" style="font-size:18px; line-height:1.6; color:var(--ink-soft); max-width:62ch; margin:0 0 52px; text-align:justify; hyphens:auto;">
+        The risk is rarely the building — it is the title that looks clean and isn't, the licence that limits what the asset can become, the tax fixed by how you buy.<br><strong style="color:var(--ink); font-weight:600;">Removing that exposure is the work.</strong>
+      </p>
+
+      <div class="com-grid four">
+        <article class="com reveal">
+          <div class="label">01 — Loyalty</div>
+          <h3>I act for you, and only you.</h3>
+          <p>One client in the room. You.</p>
+        </article>
+        <article class="com reveal d1">
+          <div class="label">02 — Accountability</div>
+          <h3>One lawyer responsible.</h3>
+          <p>No handovers, no file passed between departments.<br><b>One person answers for the whole transaction.</b></p>
+        </article>
+        <article class="com reveal d2">
+          <div class="label">03 — Transparency</div>
+          <h3>You always know where you stand.</h3>
+          <p>No silence, no surprises.<br><b>Each process and decision duly explained.</b></p>
+        </article>
+        <article class="com reveal d3">
+          <div class="label">04 — Speed</div>
+          <h3>Time = Money</h3>
+          <p>No lost in delay.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="block alt" id="get" aria-labelledby="get-title">
+      <div class="s-head">
+        <div class="eyebrow reveal">03 — What you get</div>
+        <h2 id="get-title" class="s-title reveal d1">Not a list of services.<br><span class="accent">A position that holds.</span></h2>
+      </div>
+
+      <div class="out-list">
+        <article class="out reveal">
+          <h3>Acquisition, <span class="accent">structured and closed.</span></h3>
+          <p>Due Diligence that finds what matters. A holding structure decided before you commit. The transaction taken cleanly through negotiation, closing and registry — <b>without you chasing anyone.</b></p>
+        </article>
+        <article class="out reveal d1">
+          <h3>Ownership that <span class="accent">holds up.</span></h3>
+          <p>Title, tax position and structure built to survive scrutiny — from the authorities, from a future buyer and from your own succession.</p>
+        </article>
+        <article class="out reveal d2">
+          <h3>Assets you can <span class="accent">monetize.</span></h3>
+          <p>Lease and tourism structures set up to generate yield — short-term rental licences, hotel and aparthotel frameworks, retail and hospitality leases, nursing and student housing. Compliance and upside, designed together.</p>
+        </article>
+        <article class="out reveal d3">
+          <h3>A position you <span class="accent">can leave.</span></h3>
+          <p>Every structure built with the eventual sale, refinancing or inheritance already in view.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FIT -->
+    <section class="block" id="fit" aria-labelledby="fit-title">
+      <div class="s-head">
+        <div class="eyebrow reveal">04 — Who I work with</div>
+        <h2 id="fit-title" class="s-title reveal d1">International investors who want <span class="accent">one lawyer responsible — end to end.</span></h2>
+      </div>
+
+      <div class="fit-single reveal">
+        <div class="tag">A good fit</div>
+        <h3 class="head">Investors, families, developers and builders committing seriously to Portuguese real estate.</h3>
+        <p>From Europe, the US, Brazil, Russia, the Gulf, India, Israel and beyond — wherever the capital comes from.</p>
+        <p>People who value judgement over volume, who would rather hold a single trusted line into the market and who appreciate speed and value time.</p>
+        <p class="fit-invite">Don't hesitate to contact me — if I'm not the right person to help, I'll point you to someone who is.</p>
       </div>
     </section>
 
